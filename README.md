@@ -132,7 +132,6 @@ The site can also be deployed to:
 - **Email**: joelkabura123@gmail.com
 - **LinkedIn**: [linkedin.com/in/Joelkabura](https://linkedin.com/in/Joelkabura)
 - **GitHub**: [github.com/joelkab](https://github.com/joelkab)
-- **Phone**: (725) 236-3957
 
 ## 📄 License
 

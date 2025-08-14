@@ -2,6 +2,7 @@
 
 import { useEffect, useRef, useState } from 'react'
 import { Code, Cpu, Database, GitBranch, Terminal, Wrench } from 'lucide-react'
+import Image from 'next/image'
 
 export default function About() {
   const [isVisible, setIsVisible] = useState(false)
@@ -51,7 +52,27 @@ export default function About() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-            <div className="space-y-6">
+            {/* Profile Image */}
+            <div className="order-2 md:order-1">
+              <div className="relative mx-auto max-w-sm">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                <div className="relative bg-gradient-to-r from-blue-500 to-purple-500 p-1 rounded-full">
+                  <div className="bg-white dark:bg-gray-800 p-2 rounded-full">
+                    <Image
+                      src="/images/profile.jpg"
+                      alt="Joel Kabura"
+                      width={400}
+                      height={400}
+                      className="rounded-full object-cover"
+                      priority
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* About Text */}
+            <div className="space-y-6 order-1 md:order-2">
               <p className="text-lg text-gray-700 dark:text-gray-300">
                 I'm a Computer Science student at the University of Las Vegas, Nevada, currently working as a 
                 Software Engineering Intern at Haigs's Quality Printing. I'm passionate about robotics, 
@@ -68,29 +89,32 @@ export default function About() {
                 problems and am always eager to explore new technologies and methodologies.
               </p>
             </div>
+          </div>
 
-            <div className="relative">
+          {/* Quick Facts Card */}
+          <div className="mb-16">
+            <div className="max-w-3xl mx-auto">
               <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg p-1">
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-8">
-                  <h3 className="text-2xl font-bold mb-4 text-gray-900 dark:text-white">Quick Facts</h3>
-                  <ul className="space-y-3 text-gray-700 dark:text-gray-300">
-                    <li className="flex items-center gap-3">
-                      <Terminal className="w-5 h-5 text-blue-500" />
-                      <span>Currently building robotics vision pipelines</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <GitBranch className="w-5 h-5 text-purple-500" />
-                      <span>Active open-source contributor</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Database className="w-5 h-5 text-green-500" />
-                      <span>Experience with Web3 security analytics</span>
-                    </li>
-                    <li className="flex items-center gap-3">
-                      <Cpu className="w-5 h-5 text-orange-500" />
-                      <span>Passionate about AI/ML and robotics</span>
-                    </li>
-                  </ul>
+                  <h3 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white">Quick Facts</h3>
+                  <div className="grid md:grid-cols-2 gap-4">
+                    <div className="flex items-center gap-3">
+                      <Terminal className="w-5 h-5 text-blue-500 flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">Currently building robotics vision pipelines</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <GitBranch className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">Active open-source contributor</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Database className="w-5 h-5 text-green-500 flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">Experience with Web3 security analytics</span>
+                    </div>
+                    <div className="flex items-center gap-3">
+                      <Cpu className="w-5 h-5 text-orange-500 flex-shrink-0" />
+                      <span className="text-gray-700 dark:text-gray-300">Passionate about AI/ML and robotics</span>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>

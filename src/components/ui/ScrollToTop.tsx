@@ -21,3 +21,4 @@ const ScrollToTop: React.FC<ScrollToTopProps> = ({ showScrollTop, scrollToTop })
 };
 
 export default ScrollToTop;
+

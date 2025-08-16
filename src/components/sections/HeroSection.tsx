@@ -29,7 +29,7 @@ export default function Hero() {
       <div className="relative z-10 text-center px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
         <div className={`transition-all duration-1000 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold text-white mb-6">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Joel Kabura</span>
+            Hi, I&apos;m <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-cyan-400">Joel Kabura</span>
           </h1>
           <p className="text-xl sm:text-2xl text-gray-200 mb-8">
             Software Engineering Intern | Computer Science Student
@@ -64,3 +64,4 @@ export default function Hero() {
     </section>
   )
 }
+

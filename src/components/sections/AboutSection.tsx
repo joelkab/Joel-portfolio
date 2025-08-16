@@ -74,8 +74,8 @@ export default function About() {
             {/* About Text */}
             <div className="space-y-6 order-1 md:order-2">
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                I'm a Computer Science student at the University of Las Vegas, Nevada, currently working as a 
-                Software Engineering Intern at Haigs's Quality Printing. I'm passionate about robotics, 
+                I&apos;m a Computer Science student at the University of Las Vegas, Nevada, currently working as a 
+                Software Engineering Intern at Haigs&apos;s Quality Printing. I&apos;m passionate about robotics, 
                 machine learning, and building innovative solutions that bridge the gap between simulation and reality.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
@@ -84,7 +84,7 @@ export default function About() {
                 developing secure web applications, I love tackling complex challenges and turning ideas into reality.
               </p>
               <p className="text-lg text-gray-700 dark:text-gray-300">
-                As a Dean's Honor List recipient and MLT Ascend Program Scholar, I'm committed to continuous 
+                As a Dean&apos;s Honor List recipient and MLT Ascend Program Scholar, I&apos;m committed to continuous 
                 learning and leadership development. I believe in the power of technology to solve real-world 
                 problems and am always eager to explore new technologies and methodologies.
               </p>
@@ -162,3 +162,4 @@ export default function About() {
     </section>
   )
 }
+

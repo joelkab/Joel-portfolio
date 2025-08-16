@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import { Mail, Phone, Linkedin, Github, Send, CheckCircle, AlertCircle } from 'lucide-react'
+import { Mail, Linkedin, Github, Send, CheckCircle, AlertCircle } from 'lucide-react'
 
 export default function Contact() {
   const [isVisible, setIsVisible] = useState(false)
@@ -92,7 +92,7 @@ export default function Contact() {
                   Let's Connect
                 </h3>
                 <p className="text-gray-700 dark:text-gray-300 mb-6">
-                  I'm always interested in hearing about new opportunities, collaborations, or just having a chat about technology and innovation. 
+                  I&apos;m always interested in hearing about new opportunities, collaborations, or just having a chat about technology and innovation. 
                   Feel free to reach out!
                 </p>
               </div>
@@ -235,7 +235,7 @@ export default function Contact() {
 
                 {formStatus === 'success' && (
                   <p className="text-green-600 dark:text-green-400 text-center">
-                    Thank you for your message! I'll get back to you soon.
+                    Thank you for your message! I&apos;ll get back to you soon.
                   </p>
                 )}
 
@@ -252,3 +252,4 @@ export default function Contact() {
     </section>
   )
 }
+

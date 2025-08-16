@@ -145,6 +145,4 @@ This project is open source and available under the MIT License.
 
 ---
 
-**Currently**: Software Engineering Intern at Haigs's Quality Printing | Computer Science Student at UNLV
-
 ⭐ If you found this portfolio inspiring, please give it a star!

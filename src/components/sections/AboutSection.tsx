@@ -48,15 +48,15 @@ export default function About() {
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Me</span>
+            About <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Me</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
             {/* Profile Image */}
             <div className="order-2 md:order-1">
               <div className="relative mx-auto max-w-sm">
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
-                <div className="relative bg-gradient-to-r from-blue-500 to-purple-500 p-1 rounded-full">
+                <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full blur-2xl opacity-30 animate-pulse"></div>
+                <div className="relative bg-gradient-to-r from-blue-500 to-cyan-500 p-1 rounded-full">
                   <div className="bg-white dark:bg-gray-800 p-2 rounded-full">
                     <Image
                       src="/images/profile.jpg"
@@ -94,7 +94,7 @@ export default function About() {
           {/* Quick Facts Card */}
           <div className="mb-16">
             <div className="max-w-3xl mx-auto">
-              <div className="bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg p-1">
+              <div className="bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg p-1">
                 <div className="bg-white dark:bg-gray-800 rounded-lg p-8">
                   <h3 className="text-2xl font-bold mb-6 text-center text-gray-900 dark:text-white">Quick Facts</h3>
                   <div className="grid md:grid-cols-2 gap-4">
@@ -103,7 +103,7 @@ export default function About() {
                       <span className="text-gray-700 dark:text-gray-300">Currently building robotics vision pipelines</span>
                     </div>
                     <div className="flex items-center gap-3">
-                      <GitBranch className="w-5 h-5 text-purple-500 flex-shrink-0" />
+                      <GitBranch className="w-5 h-5 text-cyan-500 flex-shrink-0" />
                       <span className="text-gray-700 dark:text-gray-300">Active open-source contributor</span>
                     </div>
                     <div className="flex items-center gap-3">
@@ -135,7 +135,7 @@ export default function About() {
                 >
                   <div className="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-lg hover:shadow-xl transition-shadow duration-300">
                     <div className="flex items-center gap-3 mb-4">
-                      <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white">
+                      <div className="p-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg text-white">
                         {skillGroup.icon}
                       </div>
                       <h4 className="text-xl font-semibold text-gray-900 dark:text-white">

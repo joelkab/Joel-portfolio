@@ -81,7 +81,7 @@ export default function Contact() {
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Touch</span>
+            Get In <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Touch</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-12">
@@ -102,25 +102,12 @@ export default function Contact() {
                   href="mailto:joelkabura123@gmail.com"
                   className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
                 >
-                  <div className="p-3 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg text-white">
+                  <div className="p-3 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg text-white">
                     <Mail className="w-6 h-6" />
                   </div>
                   <div>
                     <p className="text-sm text-gray-500 dark:text-gray-400">Email</p>
                     <p className="text-gray-900 dark:text-white font-medium">joelkabura123@gmail.com</p>
-                  </div>
-                </a>
-
-                <a
-                  href="tel:+17252363957"
-                  className="flex items-center gap-4 p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-lg transition-shadow duration-300"
-                >
-                  <div className="p-3 bg-gradient-to-r from-green-500 to-emerald-500 rounded-lg text-white">
-                    <Phone className="w-6 h-6" />
-                  </div>
-                  <div>
-                    <p className="text-sm text-gray-500 dark:text-gray-400">Phone</p>
-                    <p className="text-gray-900 dark:text-white font-medium">(725) 236-3957</p>
                   </div>
                 </a>
 
@@ -221,7 +208,7 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={formStatus === 'sending'}
-                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                  className="w-full px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-lg font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-[1.02] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                 >
                   {formStatus === 'sending' ? (
                     <>

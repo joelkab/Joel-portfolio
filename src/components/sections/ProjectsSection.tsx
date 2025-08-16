@@ -39,16 +39,16 @@ export default function Projects() {
   const projects: Project[] = [
     {
       title: 'ESBReview',
-      description: 'A social review platform with real-time database and secure authentication. Features image uploads, discussion forums, and optimized memory management reducing usage from 400MB to 27MB.',
+      description: 'ESB(Electric Skateboard Review) is an application where peopele with the intrest of Electric skate boards can share their experience of buying an eletric Skateboard, useful tips or the topic itself.',
       tech: ['Swift', 'Firebase', 'FirebaseAuth', 'KFImage'],
-      github: 'https://github.com/joelkab', // Update with actual repo link
+      github: 'https://github.com/joelkab/ESBreview2.0', // Update with actual repo link
       gradient: 'from-blue-500 to-cyan-500',
       icon: <Smartphone className="w-8 h-8" />,
       date: 'May 2022 - July 2022'
     },
     {
       title: 'Banking System',
-      description: 'Comprehensive Bank Account Management System with features for account creation, withdrawals, deposits, and information retrieval. Built with OOP principles and robust error handling.',
+      description: "The Bank Account Management System is an application for maintaining a person's account in a bank. It Can perform basic tasks like-: 1).account creation 2).information retrieval 3).withdrawing 4).deposit.",
       tech: ['C++', 'OOP', 'Data Structures'],
       github: 'https://github.com/joelkab', // Update with actual repo link
       gradient: 'from-green-500 to-emerald-500',
@@ -57,21 +57,23 @@ export default function Projects() {
     },
     {
       title: 'PhotoOptic',
-      description: 'Image enhancement platform with various filters and effects. Features URL-based image downloading and intuitive input handling for multiple image formats and sizes.',
+      description: "PhotoOptic is a program made with Python and OpenCV. It takes your ordinary pictures and makes them awesome with different filters and effects. Plus, you can grab images from the web super easily! It's all designed to be simple and straightforward.",
       tech: ['Python', 'OpenCV', 'urllib'],
-      github: 'https://github.com/joelkab', // Update with actual repo link
-      gradient: 'from-purple-500 to-pink-500',
+      github: 'https://github.com/joelkab/PhotoOptic', // Update with actual repo link
+      gradient: 'from-cyan-500 to-teal-500',
       icon: <Camera className="w-8 h-8" />,
       date: 'February 2024 - March 2024'
     },
     {
-      title: 'Robotics Vision Pipeline',
-      description: 'End-to-end vision pipeline streaming live camera feeds with custom Python scripts for real-time PyTorch policy evaluation. Reduced model-test cycles by 50% at Haigs Quality Printing.',
-      tech: ['Python', 'PyTorch', 'Computer Vision', 'ROS'],
-      gradient: 'from-orange-500 to-red-500',
-      icon: <Code className="w-8 h-8" />,
-      date: 'February 2025 - Present'
+      title: 'SpexNews',
+      description: "Spex new is an iPhone iPad app for reading the latest space news on the go. It's optimized for quickly catching up on the latest news without getting in your way.",
+      tech: ['Swift ', 'REST API'],
+      github: 'https://github.com/joelkab/SpexNews', // Update with actual repo link
+      gradient: 'from-cyan-500 to-teal-500',
+      icon: <Camera className="w-8 h-8" />,
+      date: 'June 2022 - August 2022'
     }
+    
   ]
 
   return (
@@ -79,7 +81,7 @@ export default function Projects() {
       <div className="max-w-6xl mx-auto">
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
           <h2 className="text-4xl font-bold text-center mb-16 text-gray-900 dark:text-white">
-            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-purple-500">Projects</span>
+            Featured <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-cyan-500">Projects</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -147,7 +149,7 @@ export default function Projects() {
                           href={project.demo}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-purple-500 dark:hover:text-purple-400 transition-colors"
+                          className="flex items-center gap-2 text-gray-700 dark:text-gray-300 hover:text-cyan-500 dark:hover:text-cyan-400 transition-colors"
                         >
                           <ExternalLink className="w-5 h-5" />
                           <span>Demo</span>
@@ -166,7 +168,7 @@ export default function Projects() {
               href="https://github.com/joelkab"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-purple-500 text-white rounded-full font-semibold hover:from-blue-600 hover:to-purple-600 transition-all duration-300 transform hover:scale-105"
+              className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-500 to-cyan-500 text-white rounded-full font-semibold hover:from-blue-600 hover:to-cyan-600 transition-all duration-300 transform hover:scale-105"
             >
               <Github className="w-5 h-5" />
               View More on GitHub
@@ -177,3 +179,4 @@ export default function Projects() {
     </section>
   )
 }
+

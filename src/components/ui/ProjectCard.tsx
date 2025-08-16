@@ -52,7 +52,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         {/* Creative Backgrounds */}
         {project.id === 1 && (
           // Trading Card Shop Background
-          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-purple-900 to-blue-900">
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900 via-cyan-900 to-blue-900">
             {/* Card Shop Shelves */}
             <div className="absolute top-4 left-4 w-8 h-2 bg-amber-600 rounded opacity-30"></div>
             <div className="absolute top-8 left-4 w-8 h-2 bg-amber-700 rounded opacity-40"></div>
@@ -91,20 +91,20 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
         
         {project.id === 3 && (
           // Spa/Wellness Background
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-900 via-pink-900 to-rose-900">
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-900 via-cyan-800 to-rose-900">
             {/* Zen circles */}
             <div className="absolute top-8 left-8 w-12 h-12 border-2 border-pink-300 rounded-full opacity-20"></div>
-            <div className="absolute top-12 left-12 w-8 h-8 border border-purple-300 rounded-full opacity-30"></div>
+            <div className="absolute top-12 left-12 w-8 h-8 border border-cyan-300 rounded-full opacity-30"></div>
             <div className="absolute bottom-12 right-8 w-10 h-10 border border-rose-300 rounded-full opacity-25"></div>
             
             {/* Floating bubbles */}
             <div className="absolute top-16 right-16 w-2 h-2 bg-pink-200 rounded-full opacity-40 animate-bounce"></div>
-            <div className="absolute top-24 right-12 w-1 h-1 bg-purple-200 rounded-full opacity-50 animate-bounce delay-200"></div>
+            <div className="absolute top-24 right-12 w-1 h-1 bg-cyan-200 rounded-full opacity-50 animate-bounce delay-200"></div>
             <div className="absolute bottom-16 left-16 w-3 h-3 bg-rose-200 rounded-full opacity-30 animate-bounce delay-400"></div>
             
             {/* Wellness symbols */}
             <div className="absolute top-6 right-6 text-pink-300 opacity-30 text-lg">✨</div>
-            <div className="absolute bottom-6 left-6 text-purple-300 opacity-30 text-sm">🌸</div>
+            <div className="absolute bottom-6 left-6 text-cyan-300 opacity-30 text-sm">🌸</div>
           </div>
         )}
         
@@ -164,7 +164,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <div className="w-16 h-20 relative">
                 <div className="absolute -left-3 top-2 w-4 h-5 bg-gradient-to-b from-white to-gray-300 rounded-sm group-hover:animate-pulse shadow-lg transform group-hover:rotate-12 transition-transform border border-gray-400"></div>
                 <div className="absolute -right-3 top-2 w-4 h-5 bg-gradient-to-b from-white to-gray-300 rounded-sm group-hover:animate-pulse delay-100 shadow-lg transform group-hover:-rotate-12 transition-transform border border-gray-400"></div>
-                <div className="w-10 h-16 bg-gradient-to-b from-pink-300 via-pink-400 to-pink-500 mx-auto shadow-xl border-2 border-pink-600 group-hover:animate-bounce rounded-sm"></div>
+                <div className="w-10 h-16 bg-gradient-to-b from-pink-300 via-pink-400 to-teal-500 mx-auto shadow-xl border-2 border-pink-600 group-hover:animate-bounce rounded-sm"></div>
                 <div className="absolute top-3 left-1/2 transform -translate-x-1/2 w-8 h-5 bg-pink-100 rounded-sm"></div>
                 <div className="absolute top-4 left-1/2 transform -translate-x-1/2 flex space-x-1">
                   <div className="w-1 h-1 bg-black rounded-full"></div>
@@ -203,7 +203,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({
               <div className="absolute top-3 left-3 right-3 space-y-1">
                 <div className="w-12 h-1 bg-blue-500 rounded group-hover:animate-pulse"></div>
                 <div className="w-10 h-1 bg-green-500 rounded group-hover:animate-pulse delay-100"></div>
-                <div className="w-14 h-1 bg-purple-500 rounded group-hover:animate-pulse delay-200"></div>
+                <div className="w-14 h-1 bg-cyan-500 rounded group-hover:animate-pulse delay-200"></div>
                 <div className="w-12 h-1 bg-orange-500 rounded group-hover:animate-pulse delay-300"></div>
                 <div className="w-16 h-1 bg-red-500 rounded group-hover:animate-pulse delay-400"></div>
               </div>

@@ -61,7 +61,7 @@ export default function Navbar() {
               onClick={(e) => handleNavClick(e, '#home')}
               className="flex items-center gap-2 text-xl font-bold"
             >
-              <div className="p-2 bg-gradient-to-r from-blue-500 to-purple-500 rounded-lg">
+              <div className="p-2 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-lg">
                 <Code2 className="w-6 h-6 text-white" />
               </div>
               <span className={`${scrolled ? 'text-gray-900 dark:text-white' : 'text-white'}`}>
@@ -80,7 +80,7 @@ export default function Navbar() {
                   onClick={(e) => handleNavClick(e, item.href)}
                   className={`px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 flex items-center gap-2 ${
                     activeSection === item.href.substring(1)
-                      ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
+                      ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
                       : scrolled
                       ? 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
                       : 'text-gray-200 hover:bg-white/10'
@@ -117,7 +117,7 @@ export default function Navbar() {
               onClick={(e) => handleNavClick(e, item.href)}
               className={`block px-3 py-2 rounded-md text-base font-medium transition-all duration-200 ${
                 activeSection === item.href.substring(1)
-                  ? 'bg-gradient-to-r from-blue-500 to-purple-500 text-white'
+                  ? 'bg-gradient-to-r from-blue-500 to-cyan-500 text-white'
                   : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800'
               }`}
             >

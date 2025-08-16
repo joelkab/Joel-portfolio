@@ -13,19 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Marc Dy - Software Engineer Portfolio",
+  title: "Joel Kabura - Software Engineer Portfolio",
   description: "Full-stack developer passionate about building practical solutions. From trading card price trackers to Discord bots and IoT devices.",
   openGraph: {
-    title: "Marc Dy - Software Engineer Portfolio",
+    title: "Joel Kabura - Software Engineer Portfolio",
     description: "Full-stack developer passionate about building practical solutions. From trading card price trackers to Discord bots and IoT devices.",
     url: "https://marccarlody.com",
-    siteName: "Marc Dy Portfolio",
+    siteName: "Joel Kabura Portfolio",
     images: [
       {
         url: "https://marccarlody.com/icon.png",
         width: 512,
         height: 512,
-        alt: "Marc Dy Logo",
+        alt: "Joel Kabura Logo",
       },
     ],
     locale: "en_US",
@@ -33,7 +33,7 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Marc Dy - Software Engineer Portfolio",
+    title: "Joel Kabura - Software Engineer Portfolio",
     description: "Full-stack developer passionate about building practical solutions. From trading card price trackers to Discord bots and IoT devices.",
     images: ["https://marccarlody.com/icon.png"],
   },
@@ -54,3 +54,4 @@ export default function RootLayout({
     </html>
   );
 }
+

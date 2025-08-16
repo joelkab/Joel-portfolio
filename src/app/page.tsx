@@ -7,7 +7,7 @@ import Navigation from '../components/sections/Navigation';
 import HeroSection from '../components/sections/HeroSection';
 import AboutSection from '../components/sections/AboutSection';
 import ProjectsSection from '../components/sections/ProjectsSection';
-import CADSection, { CADProject } from '../components/sections/CADSection';
+
 import ContactSection from '../components/sections/ContactSection';
 import ScrollToTop from '../components/ui/ScrollToTop';
 import Notification from '../components/ui/Notification';
@@ -20,7 +20,7 @@ import { useEmailObfuscation } from '../hooks/useEmailObfuscation';
 import { Project } from '../components/ui/ProjectCard';
 
 const user = {
-  name: "Marc Dy",
+  name: "Joel Kabura",
   title: "Software Engineer",
   bio: "I build things for the web, for my games, and for fun. Currently turning creative ideas into functional code.",
   // Email obfuscated - will be decoded client-side
@@ -125,43 +125,6 @@ const projects: Project[] = [
   }
 ];
 
-const cadProjects: CADProject[] = [
-  {
-    id: 1,
-    title: "Jetson Nano Case",
-    description: "Custom 3D-designed protective case for NVIDIA Jetson Nano optimized for wearable computing applications",
-    images: [
-      "/cad-designs/jetson_nano_1.png",
-      "/cad-designs/jetson_nano_2.png", 
-      "/cad-designs/jetson_nano_3.png"
-    ],
-    category: "Hardware Design"
-  },
-  {
-    id: 2,
-    title: "Raspberry Pi Case",
-    description: "Custom 3D-designed protective case for Raspberry Pi Compute Module and carrier PCB assembly optimized for wearable computing applications", 
-    images: [
-      "/cad-designs/raspberry_pi_1.png",
-      "/cad-designs/raspberry_pi_2.png",
-      "/cad-designs/raspberry_pi_3.png",
-      "/cad-designs/raspberry_pi_4.png"
-    ],
-    category: "Hardware Design"
-  },
-  {
-    id: 3,
-    title: "Soldering Fume Extractor",
-    description: "Custom 3D-designed fume extraction system with integrated blower fan to remove harmful solder smoke and improve workshop air quality during electronics work",
-    images: [
-      "/cad-designs/extractor_1.png",
-      "/cad-designs/extractor_2.png",
-      "/cad-designs/extractor_3.png",
-      "/cad-designs/extractor_4.png",
-    ],
-    category: "Workshop Tools"
-  }
-];
 
 const skills = [
   { category: "Languages", items: ["Python", "JavaScript", "TypeScript", "C/C++", "SQL", "HTML/CSS"] },
@@ -177,7 +140,6 @@ export default function Portfolio() {
   const [expandedProject, setExpandedProject] = useState<number | null>(null);
   const [selectedFilter, setSelectedFilter] = useState('All');
   const [notification, setNotification] = useState<{message: string, type: string} | null>(null);
-  const [selectedCADImage, setSelectedCADImage] = useState<{ projectId: number | null; imageIndex: number }>({ projectId: null, imageIndex: 0 });
   const [lightboxImage, setLightboxImage] = useState<{ src: string; title: string; index: number; projectId: number } | null>(null);
 
   // Custom hooks
@@ -216,14 +178,7 @@ export default function Portfolio() {
         setExpandedProject={setExpandedProject}
       />
 
-      {/* CAD Section */}
-      <CADSection
-        cadProjects={cadProjects}
-        selectedCADImage={selectedCADImage}
-        setSelectedCADImage={setSelectedCADImage}
-        lightboxImage={lightboxImage}
-        setLightboxImage={setLightboxImage}
-      />
+
 
       {/* Contact Section */}
       <ContactSection
@@ -246,3 +201,4 @@ export default function Portfolio() {
     </div>
   );
 };
+

@@ -1,31 +1,39 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { IBM_Plex_Sans, IBM_Plex_Mono, Fira_Mono } from "next/font/google";
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+const ibmPlexSans = IBM_Plex_Sans({
+  weight: ['300', '400', '500', '600', '700'],
+  variable: "--font-ibm-plex-sans",
   subsets: ["latin"],
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const ibmPlexMono = IBM_Plex_Mono({
+  weight: ['400', '500', '600', '700'],
+  variable: "--font-ibm-plex-mono",
+  subsets: ["latin"],
+});
+
+const firaMono = Fira_Mono({
+  weight: ['400', '500', '700'],
+  variable: "--font-fira-mono",
   subsets: ["latin"],
 });
 
 export const metadata: Metadata = {
-  title: "Marc Dy - Software Engineer Portfolio",
-  description: "Full-stack developer passionate about building practical solutions. From trading card price trackers to Discord bots and IoT devices.",
+  title: "Joel Kabura - Software Engineering Intern",
+  description: "Software engineering intern from Las Vegas. Specializing in robotics vision pipelines, PyTorch, and machine learning. Currently building tools for robotic systems at Haigs Quality Printing.",
   openGraph: {
-    title: "Marc Dy - Software Engineer Portfolio",
-    description: "Full-stack developer passionate about building practical solutions. From trading card price trackers to Discord bots and IoT devices.",
-    url: "https://marccarlody.com",
-    siteName: "Marc Dy Portfolio",
+    title: "Joel Kabura - Software Engineering Intern",
+    description: "Software engineering intern from Las Vegas. Specializing in robotics vision pipelines, PyTorch, and machine learning. Currently building tools for robotic systems at Haigs Quality Printing.",
+    url: "https://joelkabura.com",
+    siteName: "Joel Kabura Portfolio",
     images: [
       {
-        url: "https://marccarlody.com/icon.png",
+        url: "https://joelkabura.com/icon.png",
         width: 512,
         height: 512,
-        alt: "Marc Dy Logo",
+        alt: "Joel Kabura",
       },
     ],
     locale: "en_US",
@@ -33,9 +41,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary",
-    title: "Marc Dy - Software Engineer Portfolio",
-    description: "Full-stack developer passionate about building practical solutions. From trading card price trackers to Discord bots and IoT devices.",
-    images: ["https://marccarlody.com/icon.png"],
+    title: "Joel Kabura - Software Engineering Intern",
+    description: "Software engineering intern from Las Vegas. Specializing in robotics vision pipelines, PyTorch, and machine learning.",
+    images: ["https://joelkabura.com/icon.png"],
   },
 };
 
@@ -47,7 +55,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${ibmPlexSans.variable} ${ibmPlexMono.variable} ${firaMono.variable} antialiased`}
       >
         {children}
       </body>

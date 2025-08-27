@@ -23,7 +23,7 @@ export default function MinimalistHero() {
             <div className="flex-1 text-center md:text-left">
               {/* Title with accent */}
               <h1 className="text-4xl md:text-5xl font-bold mb-6 leading-tight">
-                <span className="text-pink-500">Hi</span>, I&apos;m Joel
+                <span className="text-blue-500">Hi</span>, I&apos;m Joel
               </h1>
               
               {/* Description */}

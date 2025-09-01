@@ -2,6 +2,7 @@
 
 import MinimalistHero from '@/components/sections/MinimalistHero'
 import MinimalistProjects from '@/components/sections/MinimalistProjects'
+import MinimalistShowcase from '@/components/sections/MinimalistShowcase'
 import MinimalistContact from '@/components/sections/MinimalistContact'
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <main>
         <MinimalistHero />
         <MinimalistProjects />
+        <MinimalistShowcase />
         
         {/* Future section placeholder - add your content here */}
         

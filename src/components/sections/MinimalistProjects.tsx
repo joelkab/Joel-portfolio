@@ -13,6 +13,7 @@ interface Project {
   }>
   link?: string
   github?: string
+  image?: string
 }
 
 export default function MinimalistProjects() {
@@ -39,29 +40,34 @@ export default function MinimalistProjects() {
 
   const projects: Project[] = [
     {
-      title: 'SpexNews',
-      description: 'Displays the most recent news on space from NASA, Spaceflight, Arstechnica, and more',
-      summary: 'iOS app that aggregates space news from various sources using the Spaceflight News API. Read posts directly in-app with SFSafariViewController.',
+      title: 'Autonomous Racing',
+      description: 'Programmed an RC car 1/10th the size of an F1 car to autonomously race against other cars while avoiding obstacles',
+      summary: 'Developed an autonomous racing system for a 1/10th scale F1 RC car capable of competitive racing and obstacle avoidance. Implemented advanced control systems including Model Predictive Controllers and PID Controllers, along with vision algorithms such as SLAM for environment mapping and navigation.',
       highlights: [
-        'Real-time space news from multiple sources',
-        'In-app reading with Safari browser',
-        'Uses official Spaceflight News API'
+        'Implemented Model Predictive Controllers and PID Controllers for precise vehicle control',
+        'Integrated SLAM (Simultaneous Localization and Mapping) for real-time environment perception',
+        'Conducted extensive simulations to verify control algorithms',
+        'Achieved reliable obstacle avoidance and competitive racing performance',
+        'Demonstrated feasibility of advanced control systems in small-scale autonomous vehicles'
       ],
       tags: [
-        { name: 'Swift', color: 'bg-orange-500' },
-        { name: 'iOS', color: 'bg-gray-700' },
-        { name: 'Kingfisher', color: 'bg-blue-500' }
+        { name: 'ROS2', color: 'bg-blue-500' },
+        { name: 'Python', color: 'bg-yellow-400' },
+        { name: 'Control Systems', color: 'bg-purple-500' },
+        { name: 'Computer Vision', color: 'bg-green-500' },
+        { name: 'SLAM', color: 'bg-red-500' }
       ],
-      github: 'https://github.com/joelkab/SpexNews'
+      image: '/images/autonomous-racing.png'
     },
     {
       title: 'MeowSQL',
       description: 'Database that stores and retrieves rows of data in CSV files',
-      summary: 'A custom database implementation that uses comma-separated value files for data storage and retrieval.',
+      summary: 'MeowSQL is a database application that stores and retrieves data in CSV files. It includes a secure login system that prompts the user to enter their username and password as command line arguments, and verifies the entered credentials against predefined credentials stored in the program. If the credentials are valid, the program displays a header for the database and allows the user to add, delete, and search for data through a user-friendly interface',
       highlights: [
-        'Custom CSV-based storage engine',
-        'Lightweight database implementation',
-        'Built from scratch in C++'
+        'Secure login system with command-line authentication',
+        'CSV-based data storage for lightweight deployment',
+        'Interactive menu-driven interface for CRUD operations',
+        'Built from scratch in C++ with file manipulation'
       ],
       tags: [
         { name: 'C++', color: 'bg-blue-600' },
@@ -71,36 +77,55 @@ export default function MinimalistProjects() {
       github: 'https://github.com/joelkab/MeowSQL'
     },
     {
-      title: 'esbreview',
+      title: 'ESB(Electric Skateboard Review)',
       description: 'Social review platform with real-time database and secure authentication',
-      summary: 'iOS app for ESB students to share course reviews and campus experiences. Features real-time updates and community-driven content moderation.',
+      summary: 'ESB(Electric Skateboard Review) is an application where people with an interest in electric skateboards can share their experience of buying an electric skateboard, useful tips, or the topic itself.',
       highlights: [
-        '500+ active users in first month',
-        'Real-time Firebase sync across devices',
-        'Custom rating algorithm for balanced reviews'
+        'Real-time updates with Firebase backend',
+        'Secure authentication with login/signup functionality',
+        'Image upload support using Kingfisher library',
+        'Community-focused platform for electric skateboard enthusiasts'
       ],
       tags: [
         { name: 'Swift', color: 'bg-orange-500' },
         { name: 'Firebase', color: 'bg-yellow-400' },
         { name: 'iOS', color: 'bg-gray-700' }
       ],
-      github: 'https://github.com/joelkab'
+      github: 'https://github.com/joelkab/ESBreview2.0'
     },
     {
-      title: 'photooptic',
+      title: 'PhotoOptic',
       description: 'Image enhancement platform with various filters and effects',
-      summary: 'Web-based image processing tool with AI-powered enhancements. Supports batch processing and custom filter creation.',
+      summary: 'MeowSQL is database application that stores and retrieves data in CSV files. It includes a secure login system and allows users to add, delete, and search for data. The program also includes debugging and testing features to ensure smooth operation.',
       highlights: [
-        'AI-powered automatic image enhancement',
-        'Batch processing for up to 100 images',
-        'Custom filter creation with live preview'
+        'Multiple filters and effects using OpenCV',
+        'Web image retrieval and processing capability',
+        'User-friendly interface for image transformations',
+        'Python-based for cross-platform compatibility'
       ],
       tags: [
         { name: 'Python', color: 'bg-yellow-400' },
         { name: 'OpenCV', color: 'bg-blue-500' },
         { name: 'Flask', color: 'bg-gray-700' }
       ],
-      github: 'https://github.com/joelkab'
+      github: 'https://github.com/joelkab/PhotoOptic'
+    },
+    {
+      title: 'SpexNews',
+      description: 'Displays the most recent news on space from NASA, Spaceflight, Arstechnica, and more',
+      summary: 'iOS app that aggregates space news from various sources using the Spaceflight News API. Read posts directly in-app with SFSafariViewController.',
+      highlights: [
+        'Aggregates news from NASA, Spaceflight, Arstechnica and more',
+        'In-app article reading with SFSafariViewController',
+        'Integrates official Spaceflight News API',
+        'Image caching with Kingfisher for smooth performance'
+      ],
+      tags: [
+        { name: 'Swift', color: 'bg-orange-500' },
+        { name: 'iOS', color: 'bg-gray-700' },
+        { name: 'Kingfisher', color: 'bg-blue-500' }
+      ],
+      github: 'https://github.com/joelkab/SpexNews'
     },
     {
       title: 'banking-system',
@@ -187,6 +212,17 @@ export default function MinimalistProjects() {
 
             {/* Modal Content */}
             <h2 className="text-2xl font-bold mb-4 text-black">{selectedProject.title}</h2>
+            
+            {/* Project Image */}
+            {selectedProject.image && (
+              <div className="mb-6 rounded-lg overflow-hidden">
+                <img 
+                  src={selectedProject.image} 
+                  alt={selectedProject.title}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            )}
             
             {/* Summary */}
             <p className="text-gray-700 mb-6 leading-relaxed">

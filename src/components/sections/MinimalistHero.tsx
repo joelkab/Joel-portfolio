@@ -29,7 +29,7 @@ export default function MinimalistHero() {
               {/* Description */}
               <div className="text-gray-700 space-y-4 mb-6 text-[17px] leading-[1.7]">
                 <p>
-                  I'm a software engineering intern passionate about bridging the gap between artificial intelligence and real-world applications. Currently based in Las Vegas, I specialize in building intelligent software systems that transform complex data into actionable insights.
+                  I'm a software engineering intern passionate about bridging the gap between artificial intelligence and real-world applications. Based in Las Vegas, I specialize in building intelligent software systems that transform complex data into actionable insights.
                 </p>
 
                 <p>
@@ -37,20 +37,20 @@ export default function MinimalistHero() {
                 </p>
 
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Develop software that powers advanced data visualization and analysis tools for industries like architecture, engineering, and construction</li>
+                  <li>Develop software that powers advanced data visualization and analysis tools used across industries like architecture, engineering, and construction</li>
                   <li>Contribute to solutions that help organizations make smarter decisions through AI-powered insights and interactive 3D technologies</li>
                 </ul>
 
                 <p>
-                  At <a href="https://www.haigsprinting.com/" className="text-blue-500 underline">Haigs Quality Printing</a>, I worked at the intersection of robotics and AI, where I:
+                  At <a href="https://www.haigsprinting.com/" className="text-blue-500 underline">Haigs Quality Printing</a>, I combined robotics with machine learning, where I:
                 </p>
 
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Built and programmed autonomous robots that understood and executed specialized manufacturing tasks using cutting-edge AI frameworks</li>
+                  <li>Built and programmed autonomous robots that understood and executed specialized manufacturing tasks using cutting-edge frameworks and real-time control systems</li>
                 </ul>
 
                 <p className="text-gray-600 italic">
-                  I enjoy building technology that helps businesses run smoother by turning complex challenges into practical, intelligent solutions.
+                  I enjoy creating technology that helps businesses run smoother by turning complex challenges into practical, intelligent solutions that scale.
                 </p>
               </div>
               

@@ -29,20 +29,28 @@ export default function MinimalistHero() {
               {/* Description */}
               <div className="text-gray-700 space-y-4 mb-6 text-[17px] leading-[1.7]">
                 <p>
-                  I'm a software engineering intern passionate about bridging the gap between artificial intelligence and real-world applications.
-                  Currently based in Las Vegas, I specialize in developing intelligent robotic systems that solve complex automation challenges.
+                  I'm a software engineering intern passionate about bridging the gap between artificial intelligence and real-world applications. Currently based in Las Vegas, I specialize in building intelligent software systems that transform complex data into actionable insights.
                 </p>
-                
+
                 <p>
-                  At <a href="#" className="text-blue-500 underline">Haigs Quality Printing</a>, I work at the intersection of robotics and AI, where I:
+                  At <a href="https://aeroai.io/" className="text-blue-500 underline">AERO AI</a>, I work at the intersection of AI and geospatial intelligence, where I:
                 </p>
-                
+
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Build and program autonomous robots that understand and execute specialized manufacturing tasks using cutting-edge AI frameworks</li>
+                  <li>Develop software that powers advanced data visualization and analysis tools for industries like architecture, engineering, and construction</li>
+                  <li>Contribute to solutions that help organizations make smarter decisions through AI-powered insights and interactive 3D technologies</li>
                 </ul>
-                
+
+                <p>
+                  At <a href="https://www.haigsprinting.com/" className="text-blue-500 underline">Haigs Quality Printing</a>, I worked at the intersection of robotics and AI, where I:
+                </p>
+
+                <ul className="list-disc list-inside space-y-2 ml-4">
+                  <li>Built and programmed autonomous robots that understood and executed specialized manufacturing tasks using cutting-edge AI frameworks</li>
+                </ul>
+
                 <p className="text-gray-600 italic">
-                  I enjoy building technology that helps businesses run smoother by teaching robots to handle real tasks.
+                  I enjoy building technology that helps businesses run smoother by turning complex challenges into practical, intelligent solutions.
                 </p>
               </div>
               

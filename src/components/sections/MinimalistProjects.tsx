@@ -96,7 +96,7 @@ export default function MinimalistProjects() {
     {
       title: 'PhotoOptic',
       description: 'Image enhancement platform with various filters and effects',
-      summary: 'MeowSQL is database application that stores and retrieves data in CSV files. It includes a secure login system and allows users to add, delete, and search for data. The program also includes debugging and testing features to ensure smooth operation.',
+      summary: 'PhotoOptic is a Python-based image processing application that transforms ordinary pictures into enhanced images with various filters and effects. Built with OpenCV, it provides an accessible platform for image manipulation and web image retrieval, designed with simplicity and user-friendliness in mind.',
       highlights: [
         'Multiple filters and effects using OpenCV',
         'Web image retrieval and processing capability',
@@ -157,10 +157,15 @@ export default function MinimalistProjects() {
             {projects.map((project, index) => (
               <div
                 key={project.title}
-                className={`transition-all duration-700 delay-${index * 100}`}
+                className={`transition-all duration-700 ${
+                  isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'
+                }`}
+                style={{
+                  transitionDelay: isVisible ? `${index * 150}ms` : '0ms'
+                }}
               >
-                <div 
-                  className="bg-white rounded-lg p-6 h-full flex flex-col cursor-pointer hover:shadow-lg transition-shadow duration-300"
+                <div
+                  className="bg-white rounded-lg p-6 h-full flex flex-col cursor-pointer hover:shadow-lg hover:scale-[1.02] transition-all duration-300"
                   onClick={() => setSelectedProject(project)}
                 >
                   {/* Project Title */}

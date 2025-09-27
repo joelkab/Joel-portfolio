@@ -42,11 +42,11 @@ export default function MinimalistHero() {
                 </ul>
 
                 <p>
-                  At <a href="https://www.haigsprinting.com/" className="text-blue-500 underline">Haigs Quality Printing</a>, I combined robotics with machine learning, where I:
+                  At <a href="https://www.haigsprinting.com/" className="text-blue-500 underline">Haigs Quality Printing</a>, I combined robotics with machine<br />learning to:
                 </p>
 
                 <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Built and programmed autonomous robots that understood and executed specialized manufacturing tasks using cutting-edge frameworks and real-time control systems</li>
+                  <li>Build and program autonomous robots that understood and executed specialized manufacturing tasks using cutting-edge frameworks and real-time control systems</li>
                 </ul>
 
                 <p className="text-gray-600 italic">

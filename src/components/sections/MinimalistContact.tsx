@@ -1,14 +1,13 @@
 'use client'
 
 import { useEffect, useRef, useState } from 'react'
-import React from 'react'
 import { useForm, ValidationError } from '@formspree/react'
 import { Github, Linkedin, MapPin } from 'lucide-react'
 
 export default function MinimalistContact() {
   const [isVisible, setIsVisible] = useState(false)
   const sectionRef = useRef<HTMLElement>(null)
-  
+
   const [state, handleSubmit] = useForm("xnnbzrkp")
 
   useEffect(() => {
@@ -79,7 +78,7 @@ export default function MinimalistContact() {
                 </a>
               </div>
             </div>
-            
+
             <div>
               {state.succeeded ? (
                 <div className="p-4 bg-green-50 border border-green-200 rounded text-green-700">

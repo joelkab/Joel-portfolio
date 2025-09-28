@@ -1,24 +1,40 @@
 'use client'
 
 import MinimalistHero from '@/components/sections/MinimalistHero'
+import MinimalistExperience from '@/components/sections/MinimalistExperience'
 import MinimalistProjects from '@/components/sections/MinimalistProjects'
 import MinimalistShowcase from '@/components/sections/MinimalistShowcase'
 import MinimalistContact from '@/components/sections/MinimalistContact'
+import ProgressPanel from '@/components/ProgressPanel'
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-white">
+      {/* Progress Panel */}
+      <ProgressPanel />
+
       {/* No navbar - clean like Mads' site */}
-      
+
       {/* Main sections */}
       <main>
-        <MinimalistHero />
-        <MinimalistProjects />
-        <MinimalistShowcase />
-        
+        <section id="hero">
+          <MinimalistHero />
+        </section>
+        <section id="experience">
+          <MinimalistExperience />
+        </section>
+        <section id="projects">
+          <MinimalistProjects />
+        </section>
+        <section id="showcase">
+          <MinimalistShowcase />
+        </section>
+
         {/* Future section placeholder - add your content here */}
-        
-        <MinimalistContact />
+
+        <section id="contact">
+          <MinimalistContact />
+        </section>
       </main>
       
       {/* Simple footer */}

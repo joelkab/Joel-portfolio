@@ -32,23 +32,6 @@ export default function MinimalistHero() {
                   I'm a software engineering intern passionate about bridging the gap between artificial intelligence and real-world applications. Based in Las Vegas, I specialize in building intelligent software systems that transform complex data into actionable insights.
                 </p>
 
-                <p>
-                  At <a href="https://aeroai.io/" className="text-blue-500 underline">AERO AI</a>, I work at the intersection of AI and geospatial intelligence, where I:
-                </p>
-
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Develop software that powers advanced data visualization and analysis tools used across industries like architecture, engineering, and construction</li>
-                  <li>Contribute to solutions that help organizations make smarter decisions through AI-powered insights and interactive 3D technologies</li>
-                </ul>
-
-                <p>
-                  At <a href="https://www.haigsprinting.com/" className="text-blue-500 underline">Haigs Quality Printing</a>, I combined robotics with machine<br />learning to:
-                </p>
-
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  <li>Build and program autonomous robots that understood and executed specialized manufacturing tasks using cutting-edge frameworks and real-time control systems</li>
-                </ul>
-
                 <p className="text-gray-600 italic">
                   I enjoy creating technology that helps businesses run smoother by turning complex challenges into practical, intelligent solutions that scale.
                 </p>

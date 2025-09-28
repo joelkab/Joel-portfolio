@@ -2,10 +2,14 @@
 
 import { useEffect, useRef, useState } from 'react'
 import Image from 'next/image'
+import { ChevronLeft, ChevronRight } from 'lucide-react'
 
 export default function MinimalistShowcase() {
   const [isVisible, setIsVisible] = useState(false)
+  const [canScrollLeft, setCanScrollLeft] = useState(false)
+  const [canScrollRight, setCanScrollRight] = useState(true)
   const sectionRef = useRef<HTMLElement>(null)
+  const scrollContainerRef = useRef<HTMLDivElement>(null)
   const videoRefs = useRef<(HTMLVideoElement | null)[]>([])
   
   const mediaItems = [
@@ -13,6 +17,24 @@ export default function MinimalistShowcase() {
     { type: 'video', src: '/video1.mp4', poster: '/video1-poster.jpg' },
     { type: 'video', src: '/video2.mp4', poster: '/video2-poster.jpg' }
   ]
+
+  const checkScrollButtons = () => {
+    if (scrollContainerRef.current) {
+      const { scrollLeft, scrollWidth, clientWidth } = scrollContainerRef.current
+      setCanScrollLeft(scrollLeft > 0)
+      setCanScrollRight(scrollLeft < scrollWidth - clientWidth - 10)
+    }
+  }
+
+  const handleScroll = (direction: 'left' | 'right') => {
+    if (scrollContainerRef.current) {
+      const scrollAmount = 400
+      scrollContainerRef.current.scrollBy({
+        left: direction === 'left' ? -scrollAmount : scrollAmount,
+        behavior: 'smooth'
+      })
+    }
+  }
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -41,7 +63,14 @@ export default function MinimalistShowcase() {
       observer.observe(sectionRef.current)
     }
 
-    return () => observer.disconnect()
+    // Check scroll buttons on mount and window resize
+    checkScrollButtons()
+    window.addEventListener('resize', checkScrollButtons)
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('resize', checkScrollButtons)
+    }
   }, [])
 
   return (
@@ -55,39 +84,68 @@ export default function MinimalistShowcase() {
         </div>
         
         <div className={`transition-all duration-1000 ${isVisible ? 'opacity-100' : 'opacity-0'}`}>
-          <div className="overflow-x-auto max-w-7xl mx-auto">
-            <div className="flex gap-6 justify-center pb-4">
-              {mediaItems.map((item, index) => (
-                <div key={index} className="w-96 flex-shrink-0">
-                  <div className="relative aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
-                    {item.type === 'image' ? (
-                      <Image
-                        src={item.src}
-                        alt={item.alt || ''}
-                        fill
-                        className="object-contain"
-                        priority={index === 0}
-                      />
-                    ) : (
-                      <video
-                        ref={(el) => {
-                          if (item.type === 'video') {
-                            videoRefs.current[index - 1] = el
-                          }
-                        }}
-                        src={item.src}
-                        poster={item.poster}
-                        className="w-full h-full object-cover"
-                        muted
-                        loop
-                        playsInline
-                        controls
-                      />
-                    )}
+          <div className="relative max-w-7xl mx-auto">
+            {/* Scrollable Container */}
+            <div
+              ref={scrollContainerRef}
+              onScroll={checkScrollButtons}
+              className="overflow-x-auto scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-transparent"
+              style={{ scrollSnapType: 'x mandatory' }}
+            >
+              <div className="flex gap-6 px-4 md:px-0 md:justify-center pb-4">
+                {mediaItems.map((item, index) => (
+                  <div
+                    key={index}
+                    className="w-80 md:w-96 flex-shrink-0"
+                    style={{ scrollSnapAlign: 'center' }}
+                  >
+                    <div className="relative aspect-video bg-black rounded-lg overflow-hidden shadow-lg">
+                      {item.type === 'image' ? (
+                        <Image
+                          src={item.src}
+                          alt={item.alt || ''}
+                          fill
+                          className="object-contain"
+                          priority={index === 0}
+                        />
+                      ) : (
+                        <video
+                          ref={(el) => {
+                            if (item.type === 'video') {
+                              videoRefs.current[index - 1] = el
+                            }
+                          }}
+                          src={item.src}
+                          poster={item.poster}
+                          className="w-full h-full object-cover"
+                          muted
+                          loop
+                          playsInline
+                          controls
+                        />
+                      )}
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
             </div>
+
+            {/* Mobile Swipe Indicator */}
+            <div className="flex justify-center gap-2 mt-4 md:hidden">
+              {mediaItems.map((_, index) => (
+                <div
+                  key={index}
+                  className="w-2 h-2 rounded-full bg-gray-400 transition-all"
+                  aria-hidden="true"
+                />
+              ))}
+              <p className="sr-only">Swipe to see more images</p>
+            </div>
+
+            {/* Mobile Hint */}
+            <p className="text-center text-gray-500 text-sm mt-2 md:hidden">
+              ← Swipe to explore →
+            </p>
           </div>
           
           <p className="text-center text-gray-700 text-[17px] leading-[1.7] mt-8 max-w-3xl mx-auto px-8">

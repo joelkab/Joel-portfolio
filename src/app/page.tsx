@@ -4,6 +4,7 @@ import MinimalistHero from '@/components/sections/MinimalistHero'
 import MinimalistExperience from '@/components/sections/MinimalistExperience'
 import MinimalistProjects from '@/components/sections/MinimalistProjects'
 import MinimalistShowcase from '@/components/sections/MinimalistShowcase'
+import MinimalistRecentWork from '@/components/sections/MinimalistRecentWork'
 import MinimalistContact from '@/components/sections/MinimalistContact'
 import ProgressPanel from '@/components/ProgressPanel'
 
@@ -30,7 +31,9 @@ export default function Home() {
           <MinimalistShowcase />
         </section>
 
-        {/* Future section placeholder - add your content here */}
+        <section id="recent-work">
+          <MinimalistRecentWork />
+        </section>
 
         <section id="contact">
           <MinimalistContact />
